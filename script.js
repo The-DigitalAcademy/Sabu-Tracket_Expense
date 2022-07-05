@@ -26,3 +26,19 @@ function addIncome() {
 
     displayTableData();
 }
+
+// add expense funcation
+function addExpense() {
+    getUserInput();
+
+    if (isValid(amount) && isValid(transactionName)) {
+        tableData.push({
+            id: tableData.length + 1,
+            transaction: transactionName,
+            type: 'Expense',
+            amount,
+        });
+
+        calculate();
+    }
+}
