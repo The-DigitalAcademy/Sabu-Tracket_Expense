@@ -25,25 +25,30 @@
           <input type="number" id="amount" placeholder="Amount"/>
         </div>
         <div class="button">
-          <button class="expense" onclick="addExpense()">- Expense</button>
-          <button class="income" onclick="addIncome()">+ Income</button>
+          <button class="expense bg-danger mb-3" onclick="addExpense()">
+            - Expense
+          </button>
+          
+          <button class="income  bg-success mb-3" onclick="addIncome()">
+            + Income
+          </button>
         </div>
       </div>
 
       <div class="display">
-        <h2 class="totalExpense">
+        <h2 class="totalExpense text-danger">
           Total Expense R <span id="totalExpense"></span>
         </h2>
-        <h2 class="totalIncome">
+        <h2 class="totalIncome text-success">
           Total Income R <span id="totalIncome"></span>
         </h2>
-        <h2 class="totalMoney">
+        <h2 class="totalMoney text-primary">
           Total Money R <span id="totalMoney"></span> 
         </h2>
       </div>
 
       <div>
-        <button class="clear" onclick="clearTableData()">
+        <button class="clear  bg-primary mb-3" onclick="clearTableData()">
         clear
         </button>
       </div>
