@@ -13,18 +13,19 @@
 </head>
 <body>
     <div>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-secondary d-grid gap-2 col-6 mx-auto">
+
         <div class="container-fluid">
           <a class="navbar-brand" href="#">MyTracket Expense</a>
         </div>
       </nav>
 
-      <div class="app">
+      <div class="app d-grid gap-2 col-3 mx-auto">
         <div class="input">
           <input type="text" id="transaction" placeholder="add name"/>
           <input type="number" id="amount" placeholder="Amount"/>
         </div>
-        <div class="button">
+        <div class="button ">
           <button class="expense bg-danger mb-3" onclick="addExpense()">
             - Expense
           </button>
@@ -35,7 +36,7 @@
         </div>
       </div>
 
-      <div class="display">
+      <div class="display d-grid gap-2 col-3 mx-auto">
         <h2 class="totalExpense text-danger">
           Total Expense R <span id="totalExpense"></span>
         </h2>
@@ -48,7 +49,7 @@
       </div>
 
       <div>
-        <button class="clear  bg-primary mb-3" onclick="clearTableData()">
+        <button class="clear  bg-primary mb-3 d-grid gap-2 col-6 mx-auto" onclick="clearTableData()">
         clear
         </button>
       </div>
