@@ -40,5 +40,16 @@ function addExpense() {
         });
 
         calculate();
+        clearUserInput();
+    }   else {
+        alert('all input required');
     }
+
+    displayTableData();
+}
+
+//put intput data into varible
+function getUserInput() {
+    amount = Number(document.getElementById('amount').value);
+    transactionName = document.getElementById('transaction').value;
 }
