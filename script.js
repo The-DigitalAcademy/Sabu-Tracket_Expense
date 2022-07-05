@@ -17,5 +17,12 @@ function addIncome() {
             type: 'income',
             amount,
         });
+
+        calculate();
+        clearUserInput();
+    }   else {
+        alert('all input required');
     }
+
+    displayTableData();
 }
