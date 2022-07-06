@@ -77,4 +77,8 @@ function displayTableData() {
     let totalExpense = document.getElementById('totalExpense');
     let totalMoney = document.getElementById('totalMoney');
     tableRows = document.getElementById('tableRows');
+
+    tableRows.innerHTML = `<tr class = tableHead>
+    <th>ID</th>
+    <th`
 }
