@@ -1,6 +1,10 @@
 let amount;
 let transactionName;
 
+let tableRows;
+
+let tableData = [];
+
 // varables
 let income = 0;
 let expense = 0;
