@@ -67,8 +67,14 @@ function getUserInput() {
 
 //clear input data
 function clearUserInput() {
-    document.getElementById('amount').value = '',
-    document.getElementById('transaction').value = '',
+    document.getElementById('amount').value = '';
+    document.getElementById('transaction').value = '';
 }
 
-displayTableData();
+// display table data
+function displayTableData() {
+    let totalIncome = document.getElementById('totalIncome');
+    let totalExpense = document.getElementById('totalExpense');
+    let totalMoney = document.getElementById('totalMoney');
+    tableRows = document.getElementById('tableRows');
+}
