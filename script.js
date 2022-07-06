@@ -64,3 +64,11 @@ function getUserInput() {
     amount = Number(document.getElementById('amount').value);
     transactionName = document.getElementById('transaction').value;
 }
+
+//clear input data
+function clearUserInput() {
+    document.getElementById('amount').value = '',
+    document.getElementById('transaction').value = '',
+}
+
+displayTableData();
