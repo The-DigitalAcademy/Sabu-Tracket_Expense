@@ -80,5 +80,43 @@ function displayTableData() {
 
     tableRows.innerHTML = `<tr class = tableHead>
     <th>ID</th>
-    <th`
+    <th>Transaction</th>
+    <th>Type</th>
+    <th>Price</th>
+    <th>Action</th>
+    </tr>`;
+
+    for (let i = 0; i < tableData.length; i++) {
+        tableData.innerHTML += `
+        <tr>
+                        <td>${tableData[i].id}</td>
+                        <td>${tableData[i].transaction}</td>
+                        <td>${tableData[i].type}</td>
+                        <td>${tableData[i].amount}</td>
+                        <td><button class="remove" onClick="removeTransaction(${i})">Remove</button></td>
+                        </tr>
+        `;
+    }
+
+    totalIncome.innerHTML = income;
+    totalExpense.innerHTML = expense;
+    totalMoney.innerHTML = total;
+}
+
+// calculate totals
+function calculate() {
+    income = 0;
+    expense = 0;
+    total = 0;
+
+    for (let i = 0; i < tableData.length; i ++) {
+        if (tableData[i].type == 'Income') {
+            income += tableData[i].amount;
+        }
+        if (tableData[i].type == 'Expense') {
+            expense += tableData[i].amount;
+    }
+}
+
+total = income - expense;
 }
