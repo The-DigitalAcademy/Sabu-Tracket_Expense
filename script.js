@@ -134,3 +134,16 @@ function removeTransaction(index) {
     }
 }
 
+//clear table
+function clearTableData() {
+    if (tableData.length == 0) {
+        alert('Transaction table is aleady empty');
+        return;
+    }
+    if (window.confirm('Are you sure to clear   Transaction table')) {
+        tableData = [];
+        calculate();
+        displayTableData();
+    }
+}
+
