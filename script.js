@@ -125,7 +125,12 @@ total = income - expense;
 function removeTransaction(index) {
     if( 
         window.confirm(
-            remove: ${tableData[index.id + ':']}
+            remove+tableRows: ${tableData[index.id + ':' + tableData[index].transaction]} ?
         )
-    )
+    )   {
+        tableData.splice(index, 1);
+        calculate();
+        displayTableData();
+    }
 }
+
