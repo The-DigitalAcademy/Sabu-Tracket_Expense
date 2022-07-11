@@ -32,7 +32,7 @@ function addIncome() {
         calculate();
         clearUserInput();
     }   else {
-        alert('all input required');
+        alert('all input are required');
     }
 
     displayTableData();
@@ -53,7 +53,7 @@ function addExpense() {
         calculate();
         clearUserInput();
     }   else {
-        alert('all input required');
+        alert('all input are required');
     }
 
     displayTableData();
@@ -125,7 +125,7 @@ total = income - expense;
 function removeTransaction(index) {
     if( 
         window.confirm(
-            remove+tableRows: ${tableData[index.id + ':' + tableData[index].transaction]} ?
+            `remove: ${tableData[index.id + ':' + tableData[index].transaction]} ?`
         )
     )   {
         tableData.splice(index, 1);
@@ -147,3 +147,4 @@ function clearTableData() {
     }
 }
 
+displayTableData ();
