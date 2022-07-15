@@ -1,8 +1,11 @@
+//input variablles
 let amount;
 let transactionName;
 
+//table rows
 let tableRows;
 
+//keeps data for table
 let tableData = [];
 
 // varables
