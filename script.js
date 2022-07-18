@@ -1,8 +1,6 @@
-//input variablles
 let amount;
 let transactionName;
 
-//table rows
 let tableRows;
 
 //keeps data for table
@@ -117,7 +115,7 @@ function calculate() {
             income += tableData[i].amount;
         }
         if (tableData[i].type == 'Expense') {
-            expense += tableData[i].amount;
+            expense -= tableData[i].amount;
     }
 }
 
