@@ -3,19 +3,15 @@ var state = {
     income: 0,
     expense: 0,
     transaction: [
-
+        {type: 'income', detail: 'salary', amount: 1200}
+        {type: 'expense', detail: 'salary', amount: 500}
+        {type: 'expense', detail: 'salary', amount: 300}
     ]
 }
 
-let tableRows;
-
-//keeps data for table
-let tableData = [];
-
-// varables
-let income = 0;
-let expense = 0;
-let total = 0;
+var balance = document.getElementById('balance')
+var income = document.getElementById('income')
+var expense = document.getElementById('expense')
 
 function isValid(value) {
     if (!value) {
