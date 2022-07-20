@@ -37,26 +37,21 @@
         <div class="transaction transaction-income">
           <span class="text">Salary</span>
           <span class="amount">R1400</span>
-          <span class="remove">X</span>
+          <button class="remove">X</button>
         </div>
+
+        <div class="transaction transaction-income">
+          <span class="text">Lucnch</span>
+          <span class="amount">R100</span>
+          <button class="remove">X</button> 
+        </div>
+
       </div>
 
-      <div class="transaction-container">
-        <h2 class="totalExpense text-danger">
-          Total Expense R <span id="totalExpense"></span>
-        </h2>
-        <h2 class="totalIncome text-success">
-          Total Income R <span id="totalIncome"></span>
-        </h2>
-        <h2 class="totalMoney text-primary">
-          Total Money R <span id="totalMoney"></span> 
-        </h2>
-      </div>
-
-      <div>
-        <button class="btn btn-warning warning d-grid gap-2 col-1 mx-auto" onclick="clearTableData()">
-        clear
-        </button>
+      <div class="transaction transaction-expense">
+        <span class="text">Transport</span>
+          <span class="amount">R800</span>
+          <button class="remove">X</button>
       </div>
     </div>
       <script src="./script.js"></script>
