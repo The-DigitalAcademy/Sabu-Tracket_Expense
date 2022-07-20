@@ -15,21 +15,21 @@
     <div class="app">
       <h1 class="header">Tracket Expense</h1>
 
-      
+
       <div class="balance-container">
         <div class="lead">BALANCE<span id="balance">R500</span></div>
         <div class="lead">INCOME<span id="income">R200</span></div>
         <div class="lead">EXPENSE<span id="Expense">R500</span></div>
       </div>
 
-      <div class="app d-grid gap-2 col-3 mx-auto">
+      <div class="add-container">
         <div class="input">
-          <input type="text" id="transaction" placeholder="Add name"/>
-          <input type="number" id="amount" placeholder="Amount"/>
+          <input type="text" placeholder="Detail" id="detail"/>
+          <input type="number" placeholder="Amount" id="amount"/>
         </div>
         <div class="button">
-          <button class="btn expense text-white bg-danger mb-3" onclick="addExpense()">- Expense</button>
-          <button class="btn income  text-white bg-success mb-3" onclick="addIncome()">+ Income</button>
+          <button class="btn expense" onclick="addExpense()">- Expense</button>
+          <button class="btn income" onclick="addIncome()">+ Income</button>
         </div>
       </div>
 
