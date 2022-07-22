@@ -104,3 +104,19 @@ body {
     overflow: scroll;
 }
 
+.transaction-income {
+    border-right: solid 0.5rem blue;
+}
+
+.transaction-expense {
+    border-right: solid 0.5rem red;
+}
+
+.amount {
+    font-weight: bold;
+}
+
+.remove {
+    padding: 0.2rem;
+    cursor: pointer;
+}
