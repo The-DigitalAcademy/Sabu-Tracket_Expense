@@ -54,3 +54,12 @@ body {
 #expense {
     color: red;
 }
+
+.add-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    border: solid gray;
+    padding: 1rem;
+    background-color: whitesmoke;
+}
