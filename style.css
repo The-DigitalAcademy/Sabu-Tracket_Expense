@@ -42,3 +42,15 @@ body {
     font-weight: bold;
     color: gray;
 }
+
+#balance {
+    color: green;
+}
+
+#income {
+    color: blue;
+}
+
+#expense {
+    color: red;
+}
