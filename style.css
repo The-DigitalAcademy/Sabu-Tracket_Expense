@@ -13,3 +13,9 @@ body {
     font-family: 'Times New Roman', Times, serif;
 }
 
+.app {
+    background-color: white;
+    height: 800px;
+    width: 500px;
+    
+}
