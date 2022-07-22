@@ -83,3 +83,17 @@ body {
     color: blue;
 }
 
+.transaction-container {
+    overflow: scroll;
+    flex: 1;
+    display: flex;
+    padding: 1rem;
+    gap: 1rem;
+    border: solid 1px black;
+}
+
+.transaction {
+    display: flex;
+    background-color: whitesmoke;
+    padding: 0.5rem;
+}
