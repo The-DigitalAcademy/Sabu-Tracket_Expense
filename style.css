@@ -75,6 +75,11 @@ body {
     color: black;
 }
 
-.button #btn-expense {
+.expense {
+    color: red;
+}
+
+.income {
     color: blue;
 }
+
