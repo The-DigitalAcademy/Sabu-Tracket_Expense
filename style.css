@@ -63,3 +63,18 @@ body {
     padding: 1rem;
     background-color: whitesmoke;
 }
+
+.add-container input {
+    padding: 0.5rem;
+    outline: none;
+}
+
+.add-container button {
+    padding: 0.5rem;
+    cursor: pointer;
+    color: black;
+}
+
+.button #btn-expense {
+    color: blue;
+}
