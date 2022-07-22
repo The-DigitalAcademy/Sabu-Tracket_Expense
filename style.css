@@ -97,3 +97,10 @@ body {
     background-color: whitesmoke;
     padding: 0.5rem;
 }
+
+.text {
+    flex: 1;
+    text-align: right;
+    overflow: scroll;
+}
+
