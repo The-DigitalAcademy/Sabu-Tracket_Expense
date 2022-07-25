@@ -13,55 +13,89 @@ var balance = document.getElementById('balance')
 var income = document.getElementById('income')
 var expense = document.getElementById('expense')
 var detail = document.getElementById('detail')
+var amount = document.getElementById('amount')
 
-function isValid(value) {
-    if (!value) {
-        return false;
+var transactionContainer = document,getElementById('transaction-container')
+var transaction
+
+//display everything
+function display() {
+    state.transaction.reverse()
+
+    balance.innerHTML = state.balance
+    income.innerHTML = state.income
+    expense.innerHTML = state.expense
+
+    let myIncome = 0
+    let myExpense = 0
+    let myBalance = 0
+
+    transactionContainer.innerHTML = ``
+
+    for (let i = 0; i < state.transaction.length; i++) {
+        let transaction = state.transaction[i]
+
+        if (transaction.type == 'income') {
+            myIncome += transaction.amount
+            transactionContainer.innerHTML += `</div class= "transaction transact-income">
+            <span class="text">${transaction.detail}</span>
+            <span class="amount">${transaction.amount}</span>
+            <button class="remove" onClick="deleteTransaction(${i})"></button>
+            </div>`
+
+        }   else {
+            myExpense += transaction.amount
+            transactionContainer.innerHTML += `</div class= "transaction transact-income">
+            <span class="text">${transaction.detail}</span>
+            <span class="amount">${transaction.amount}</span>
+            <button class="remove" onClick="deleteTransaction(${i})"></button>
+            </div>`
+        }
     }
-    return true;
+
+    state.income = Number (myIncome)
+    state.expense = Number (myExpense)
+
+    balance.innerHTML = myIncome - myExpense
+    income.innerHTML = state.income
+    expense.innerHTML = state.expense
 }
 
 // add income funcation
 function addIncome() {
-    getUserInput();
-
-    if (isValid(amount) && isValid(transactionName)) {
-        tableData.push({
-            id: tableData.length + 1,
-            transaction: transactionName,
-            type: 'income',
-            amount,
-        });
-
-        calculate();
-        clearUserInput();
-    }   else {
-        alert('all input are required');
+    if (detail.value == '' || amount.value == '') {
+        alert ('please add detail')
     }
-    
 
-    displayTableData();
+    state.transaction.push({
+        type: 'income',
+        detail: detail.value,
+        amount: amount.value,
+    })
+
+    detail.value = ''
+    amount.value = ''
+
+
+    display();
 }
 
 // add expense funcation
 function addExpense() {
-    getUserInput();
-
-    if (isValid(amount) && isValid(transactionName)) {
-        tableData.push({
-            id: tableData.length + 1,
-            transaction: transactionName,
-            type: 'Expense',
-            amount,
-        });
-
-        calculate();
-        clearUserInput();
-    }   else {
-        alert('all input are required');
+    if (detail.value == '' || amount.value == '') {
+        alert ('please add detail')
     }
 
-    displayTableData();
+    state.transaction.push({
+        type: 'expense',
+        detail: detail.value,
+        amount: amount.value,
+    })
+
+    detail.value = ''
+    amount.value = ''
+
+    display();
 }
 
 //put intput data into varible
@@ -74,38 +108,6 @@ function getUserInput() {
 function clearUserInput() {
     document.getElementById('amount').value = '';
     document.getElementById('transaction').value = '';
-}
-
-// display table data
-function displayTableData() {
-    let totalIncome = document.getElementById('totalIncome');
-    let totalExpense = document.getElementById('totalExpense');
-    let totalMoney = document.getElementById('totalMoney');
-    tableRows = document.getElementById('tableRows');
-
-    tableRows.innerHTML = `<tr class = tableHead>
-    <th>ID</th>
-    <th>Transaction</th>
-    <th>Type</th>
-    <th>Price</th>
-    <th>Action</th>
-    </tr>`;
-
-    for (let i = 0; i < tableData.length; i++) {
-        tableData.innerHTML += `
-        <tr>
-                        <td>${tableData[i].id}</td>
-                        <td>${tableData[i].transaction}</td>
-                        <td>${tableData[i].type}</td>
-                        <td>${tableData[i].amount}</td>
-                        <td><button class="remove" onClick="removeTransaction(${i})">Remove</button></td>
-                        </tr>
-        `;
-    }
-
-    totalIncome.innerHTML = income;
-    totalExpense.innerHTML = expense;
-    totalMoney.innerHTML = total;
 }
 
 // calculate totals
@@ -152,4 +154,4 @@ function clearTableData() {
     }
 }
 
-displayTableData ();
+display ();
