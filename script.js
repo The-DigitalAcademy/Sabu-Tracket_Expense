@@ -3,8 +3,8 @@ var state = {
     income: 0,
     expense: 0,
     transaction: [
-        {type: 'income', detail: 'salary', amount: 1200}
-        {type: 'expense', detail: 'salary', amount: 500}
+        {type: 'income', detail: 'salary', amount: 1200},
+        {type: 'expense', detail: 'salary', amount: 500},
         {type: 'expense', detail: 'salary', amount: 300}
     ]
 }
@@ -12,6 +12,7 @@ var state = {
 var balance = document.getElementById('balance')
 var income = document.getElementById('income')
 var expense = document.getElementById('expense')
+var detail = document.getElementById('detail')
 
 function isValid(value) {
     if (!value) {
@@ -37,6 +38,7 @@ function addIncome() {
     }   else {
         alert('all input are required');
     }
+    
 
     displayTableData();
 }

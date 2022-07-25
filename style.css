@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: grey;
+    background-color: rgb(171, 168, 168);
     color: black ;
     height: 100vh;
     display: grid;
@@ -29,9 +29,9 @@ body {
 .header {
     font-weight: bold;
     margin-top: 1rem;
-    border: solid 1px black;
+    border: solid 5px purple;
     padding: 1rem;
-    color: grey;
+    color: rgb(83, 37, 90);
 }
 
 .balance-container {
@@ -40,7 +40,7 @@ body {
     font-size: 1.5rem;
     letter-spacing: 2px;
     font-weight: bold;
-    color: gray;
+    color: black;
 }
 
 #balance {
@@ -59,7 +59,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    border: solid gray;
+    border: solid purple;
     padding: 1rem;
     background-color: whitesmoke;
 }
