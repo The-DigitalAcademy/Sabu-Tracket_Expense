@@ -106,11 +106,11 @@ body {
     overflow: scroll;
 }
 
-.transaction-income {
+.transact-income {
     border-right: solid 0.5rem blue;
 }
 
-.transaction-expense {
+.transact-expense {
     border-right: solid 0.5rem red;
 }
 
