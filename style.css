@@ -75,11 +75,13 @@ body {
     color: black;
 }
 
-.expense {
+.expense-btn {
+    border-left: solid 0.5rem red;
     color: red;
 }
 
-.income {
+.income-btn {
+    border-left: solid 0.5rem blue;
     color: blue;
 }
 
