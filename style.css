@@ -95,6 +95,16 @@ button:hover {
     gap: 1rem;
 }
 
+.tableHead {
+    position:sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: gainsboro;
+}
+
+th 
+
 .remove {
     padding: 0.2rem;
     cursor: pointer;
