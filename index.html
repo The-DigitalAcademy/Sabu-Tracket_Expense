@@ -14,35 +14,36 @@
 
       <div class="add-container">
         <div class="input">
-          <input type="text" placeholder="Detail" id="detail"/>
-          <input type="number" placeholder="Amount" id="amount"/>
+          <input type="text" id="transaction" placeholder="Transaction name"/>
+          <input type="number" placeholder="Amount"/>
         </div>
-        <div class="b">
-          <button class="expense expense-btn" onclick="addexpense()">- Expense</button>
-          <button class="income income-btn" onclick="addincome()">+ Income</button>
+        <div class="button">
+          <button class="expense" onclick="addexpense()">- Expense</button>
+          <button class="income" onclick="addincome()">+ Income</button>
         </div>
       </div>
 
-      <div class="transaction-container">
-        <div class="transaction transact-income">
-          <span class="text">Salary</span>
-          <span class="amount">R1400</span>
-          <button class="remove">X</button>
-        </div>
+      <br>
 
-        <div class="transaction transact-income">
-          <span class="text">Lucnch</span>
-          <span class="amount">R100</span>
-          <button class="remove">X</button> 
-        </div>
+      <div class="Display">
+        <h2 class="totalExpense">Total Expense R <span id="totalExpense"></span>
+        </h2>
+        <h2 class="totalIncome">Total Income R <span id="totalIncome"></span>
+        </h2>
+        <h2 class="totalMoney">Total Money R <span id="totalMoney"></span>
+        </h2>
+      </div>
 
-      
+      <div class="statement">
+        <table border="1" id="tableRow">
+          <span>Statement</span>
+        </table>
+      </div>
 
-        <div class="transaction transact-expense">
-          <span class="text">Transport</span>
-          <span class="amount">R800</span>
-          <button class="remove">X</button>
-        </div>
+      <div>
+        <button class="clear" onclick="clearTableData()">
+          Clear Transaction
+        </button>
       </div>
     </div>
       <script src="./script.js"></script>
