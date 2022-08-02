@@ -2,7 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    tra
+    transition: all 500ms;
+    border-radius: 0.5rem;
 }
 
 body {
@@ -17,109 +18,91 @@ body {
 .app {
     background-color: white;
     height: 800px;
-    width: 500px;
+    width: 60%;
     padding: 1rem;
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 1rem;
     text-align: center;
     border-radius: 1rem;
-    border: solid 1px black;
+    padding-top: 2rem;
 }
 
 .header {
     font-weight: bold;
     margin-top: 1rem;
-    border: solid 5px purple;
+    border: solid 5px black;
     padding: 1rem;
-    color: rgb(83, 37, 90);
-}
-
-.balance-container {
-    display: flex;
-    flex-direction: column;
-    font-size: 1.5rem;
-    letter-spacing: 2px;
-    font-weight: bold;
     color: black;
 }
 
-#balance {
-    color: green;
+.input {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
 }
 
-#income {
-    color: blue;
+input {
+    flex:0;
+    padding: 1rem;
+    outline: none;
 }
 
-#expense {
-    color: red;
+.button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+button {
+    padding: 1rem 2rem;
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+    color: whitesmoke;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+.expense {
+    background-color: red;
+}
+.income {
+    background-color: green;
 }
 
 .add-container {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    border: solid purple;
+    border: solid black;
     padding: 1rem;
     background-color: whitesmoke;
 }
 
-.add-container input {
-    padding: 0.5rem;
-    outline: none;
-}
-
-.add-container button {
-    padding: 0.5rem;
-    cursor: pointer;
-    color: black;
-}
-
-.expense-btn {
-    border-left: solid 0.5rem red;
-    color: red;
-}
-
-.income-btn {
-    border-left: solid 0.5rem blue;
-    color: blue;
-}
-
-.transaction-container {
-    overflow: scroll;
-    flex: 1;
+.statemnet {
+    width: 100%;
+    height: 50vh;
+    position: relative;
+    overflow-y: scroll;
     display: flex;
-    padding: 1rem;
+    flex-direction: column;
+    justify-content: center;
     gap: 1rem;
-    border: solid 1px black;
-}
-
-.transaction {
-    display: flex;
-    background-color: whitesmoke;
-    padding: 0.5rem;
-}
-
-.text {
-    flex: 1;
-    text-align: right;
-    overflow: scroll;
-}
-
-.transact-income {
-    border-right: solid 0.5rem blue;
-}
-
-.transact-expense {
-    border-right: solid 0.5rem red;
-}
-
-.amount {
-    font-weight: bold;
 }
 
 .remove {
     padding: 0.2rem;
     cursor: pointer;
+}
+
+.clear {
+    background-color: yellow;
+    border: solid black;
+    color: black;
+    float: right;
 }

@@ -110,7 +110,7 @@ function clearUserInput() {
     document.getElementById('transaction').value = '';
 }
 
-// calculate totals
+// CalculateTotals
 function calculate() {
     income = 0;
     expense = 0;
@@ -128,7 +128,7 @@ function calculate() {
 total = income - expense;
 }
 
-// remove from the table
+// RemoveTable
 function removeTransaction(index) {
     if( 
         window.confirm(
@@ -139,6 +139,19 @@ function removeTransaction(index) {
         calculate();
         displayTableData();
     }
+}
+
+// ClearTable
+function clearTableData() {
+    if (tableData.length == 0) {
+        alert('Transaction already empty')
+        return;
+    }
+}
+if (window.confirm('are you sure clear total?')) {
+    tableData = [];
+    calculate();
+    displayTableData();
 }
 
 
