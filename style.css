@@ -16,7 +16,7 @@ body {
 }
 
 .app {
-    background-color: white;
+    background-color: gainsboro;
     height: 800px;
     width: 60%;
     padding: 1rem;
@@ -75,14 +75,14 @@ button:hover {
     background-color: green;
 }
 
-.add-container {
+/* .add-container {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
     border: solid black;
     padding: 1rem;
     background-color: whitesmoke;
-}
+} */
 
 .statemnet {
     width: 100%;
@@ -103,16 +103,64 @@ button:hover {
     background-color: gainsboro;
 }
 
-th 
+th {
+    padding: 0.5rem 0;
+}
+
+.statemnet span {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+table {
+    border-collapse: separate;
+}
+
+td {
+    padding: 0.5rem;
+    text-align: center;
+    border-radius: 0%;
+}
+
+.display {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    border: solid 1px gainsboro;
+}
+
+.totalExpense {
+    color: red;
+}
+
+.totalIncome {
+    color: green;
+}
+
+.totalMoney {
+    color: navy;
+}
+
+.test {
+    width: 8rem;
+    color: black;
+    font-weight: bold;
+    border: solid 5px black;
+    cursor: pointer;
+}
 
 .remove {
-    padding: 0.2rem;
-    cursor: pointer;
+    padding: 0.5rem;
+    border: solid 2px red;
+    color: red;
 }
 
 .clear {
     background-color: yellow;
-    border: solid black;
     color: black;
     float: right;
 }

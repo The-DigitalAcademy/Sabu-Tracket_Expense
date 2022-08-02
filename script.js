@@ -1,15 +1,18 @@
+// input variables
 let amount;
 let transactionName;
 
+// tabel rows
 let tableRows;
 
+// keeps data for the table
 let tableData = [];
 
+// varables
 let income = 0;
 let expense = 0;
 let total = 0;
 
-//display everything
 function isValid(value) {
     if (!value) {
         return false;
@@ -17,28 +20,33 @@ function isValid(value) {
     return true;
 }
 
-// add Expense...
+// add expense function
 function addExpense() {
     getUserInput();
 
     if (isValid(amount) && isValid(transactionName)) {
-        tableRows.push({
+        tableData.push({
             id: tableData.length +1,
             transaction: transactionName,
             type: 'Expense',
             amount,
         });
+
+        calculate();
+        clearUserInput();
+    }   else {
+        alert('please add all input')
     }
-}
+
     displayTableData();
 }
 
-// add Income...
+// add income function
 function addIncome() {
     getUserInput();
 
     if (isValid(amount) && isValid(transactionName)) {
-        tableRows.push({
+        tableData.push({
             id: tableData.length +1,
             transaction: transactionName,
             type: 'Income',
@@ -66,6 +74,7 @@ function clearUserInput() {
     document.getElementById('transaction').value = '';
 }
 
+// display table data
 function displayTableData() {
     let totalExpense = document.getElementById('totalExpense');
     let totalIncome = document.getElementById('totalIncome');
@@ -78,7 +87,7 @@ function displayTableData() {
     <th>Type</th>
     <th>Price</th>
     <th>Action</th>
-    </tr>`
+    </tr>`;
 
     for (let i = 0; i < tableData.length; i ++) {
         tableRows.innerHTML += `
@@ -89,7 +98,7 @@ function displayTableData() {
                         <td>${tableData[i].amount}</td>
                         <td><button class="remove" onClick="removeTransaction(${i})">Remove</button></td>
                         </tr>
-        ;`
+        `;
     }
 
     totalExpense.innerHTML = expense;
@@ -97,29 +106,29 @@ function displayTableData() {
     totalMoney.innerHTML = total;
 }
 
-// CalculateTotals
+// Calculate Totals
 function calculate() {
     income = 0;
     expense = 0;
     total = 0;
 
     for (let i = 0; i < tableData.length; i ++) {
+        if (tableData[i].type == 'Expense') {
+            expense += tableData[i].amount;
+        }
         if (tableData[i].type == 'Income') {
             income += tableData[i].amount;
-        }
-        if (tableData[i].type == 'Expense') {
-            expense -= tableData[i].amount;
     }
 }
 
-total = income - expense;
+total = expense - income;
 }
 
-// RemoveTable
+// Remove Table
 function removeTransaction(index) {
     if( 
         window.confirm(
-            `remove: ${tableData[index.id + ':' + tableData[index].transaction]} ?`
+            `remove: ${tableData[index].id + ':' + tableData[index].transaction} ?`
         )
     )   {
         tableData.splice(index, 1);
@@ -128,18 +137,17 @@ function removeTransaction(index) {
     }
 }
 
-// ClearTable
+// Clear Table
 function clearTableData() {
     if (tableData.length == 0) {
         alert('Transaction already empty')
         return;
     }
+    if (window.confirm('are you syre clear total?')) {
+        tableData = [];
+        calculate();
+        displayTableData;
+    }
 }
-if (window.confirm('are you sure clear total?')) {
-    tableData = [];
-    calculate();
-    displayTableData();
-}
-
 
 display ();

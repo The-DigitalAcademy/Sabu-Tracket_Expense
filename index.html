@@ -4,38 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MyTracket Expense</title>
     <link rel="stylesheet" href="style.css">
+    <title>MyTracket Expense</title>
     
 </head>
 <body>
     <div class="app">
       <h1 class="header">Tracket Expense</h1>
 
-      <div class="add-container">
-        <div class="input">
-          <input type="text" id="transaction" placeholder="Transaction name"/>
-          <input type="number" placeholder="Amount"/>
-        </div>
-        <div class="button">
-          <button class="expense" onclick="addexpense()">- Expense</button>
-          <button class="income" onclick="addincome()">+ Income</button>
-        </div>
+      
+      <div class="input">
+          <input type="text" id="transaction" placeholder="Transaction name" />
+          <input type="number" id="amount" placeholder="Amount" />
+      </div>
+      <div class="button">
+        <button class="expense" onclick="addExpense()">- Expense</button>
+        <button class="income" onclick="addIncome()">+ Income</button>
       </div>
 
       <br>
 
-      <div class="Display">
-        <h2 class="totalExpense">Total Expense R <span id="totalExpense"></span>
+      <div class="display">
+        <h2 class="totalExpense">
+          Total Expense R <span id="totalExpense"></span>
         </h2>
-        <h2 class="totalIncome">Total Income R <span id="totalIncome"></span>
+        <h2 class="totalIncome">
+          Total Income R <span id="totalIncome"></span>
         </h2>
-        <h2 class="totalMoney">Total Money R <span id="totalMoney"></span>
+        <h2 class="totalMoney">
+          Total Money R <span id="totalMoney"></span>
         </h2>
       </div>
 
       <div class="statement">
-        <table border="1" id="tableRow">
+        <table border="1" id="tableRows">
           <span>Statement</span>
         </table>
       </div>
