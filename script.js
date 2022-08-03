@@ -82,10 +82,10 @@ function displayTableData() {
     tableRows = document.getElementById('tableRows');
 
     tableRows.innerHTML = `<tr class="tableHead">
-    <th>ID</th>
+    <th>List</th>
     <th>Transaction</th>
     <th>Type</th>
-    <th>Price</th>
+    <th>Cash</th>
     <th>Action</th>
     </tr>`;
 
