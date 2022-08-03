@@ -38,7 +38,7 @@ body {
 }
 
 .input {
-    width: 100%;
+    
     display: flex;
     justify-content: center;
     gap: 1rem;
@@ -71,12 +71,14 @@ button:hover {
 
 .expense {
     background-color: rgb(74, 74, 241);
+    width: 100%;
 }
 .income {
     background-color: whitesmoke;
     text-align: center;
     color: blue;
     border: solid blue 0.5px;
+    width: 100%;
 }
 
 .statement {
@@ -154,9 +156,9 @@ td {
 
 .remove {
     padding: 0.5rem;
-    border: solid 1px red;
+    border: solid 1px gray;
     color: whitesmoke;
-    background-color: red;
+    background-color: royalblue;
 }
 
 .clear {
