@@ -35,7 +35,7 @@ function addExpense() {
         calculate();
         clearUserInput();
     }   else {
-        alert('please add all input')
+        alert('please add all typing')
     }
 
     displayTableData();
@@ -56,7 +56,7 @@ function addIncome() {
         calculate();
         clearUserInput();
     }   else {
-        alert('please add all input')
+        alert('please add all typing')
     }
 
     displayTableData();
@@ -143,7 +143,7 @@ function clearTableData() {
         alert('Transaction already empty')
         return;
     }
-    if (window.confirm('are you syre clear total?')) {
+    if (window.confirm('are you clear total?')) {
         tableData = [];
         calculate();
         displayTableData;
