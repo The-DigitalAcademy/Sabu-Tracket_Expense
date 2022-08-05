@@ -162,7 +162,8 @@ td {
 }
 
 .clear {
-    background-color: yellow;
-    color: black;
+    background-color: whitesmoke;
+    color: blue;
     float: right;
+    border: solid 1px blue;
 }
