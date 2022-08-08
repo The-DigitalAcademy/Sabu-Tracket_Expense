@@ -143,7 +143,7 @@ function clearTableData() {
         alert('Transaction already empty')
         return;
     }
-    if (window.confirm('are you clear total?')) {
+    if (window.confirm('are you sure clear total?')) {
         tableData = [];
         calculate();
         displayTableData;
