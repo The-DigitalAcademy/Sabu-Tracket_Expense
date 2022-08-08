@@ -26,7 +26,7 @@ function addExpense() {
 
     if (isValid(amount) && isValid(transactionName)) {
         tableData.push({
-            id: tableData.length +1,
+            id: tableData.length -1,
             transaction: transactionName,
             type: 'Expense',
             amount,
@@ -108,20 +108,20 @@ function displayTableData() {
 
 // Calculate Totals
 function calculate() {
-    income = 0;
     expense = 0;
+    income = 0;
     total = 0;
 
     for (let i = 0; i < tableData.length; i ++) {
         if (tableData[i].type == 'Expense') {
-            expense += tableData[i].amount;
+            expense -= tableData[i].amount;
         }
         if (tableData[i].type == 'Income') {
             income += tableData[i].amount;
     }
 }
 
-total = expense - income;
+total = income - expense;
 }
 
 // Remove Table
