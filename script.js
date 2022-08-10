@@ -140,13 +140,13 @@ function removeTransaction(index) {
 // Clear Table
 function clearTableData() {
     if (tableData.length == 0) {
-        alert('Transaction already empty')
+        alert('Transaction already empty');
         return;
     }
     if (window.confirm('are you sure clear total?')) {
         tableData = [];
         calculate();
-        displayTableData;
+        displayTableData();
     }
 }
 
