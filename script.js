@@ -1,14 +1,11 @@
-// input variables
-let amount;
-let transactionName;
+//KEEP DATA FOR THE TABLE
+let tableData = []
 
-// tabel rows
-let tableRows;
+let amount = document.getElementById('amount')
+let transactionName = document.getElementById('transactionName')
+let tableRows = document.getElementById('tableRows')
 
-// keeps data for the table
-let tableData = [];
-
-// varables
+//VARABLES
 let income = 0;
 let expense = 0;
 let total = 0;
@@ -20,7 +17,7 @@ function isValid(value) {
     return true;
 }
 
-// add expense function
+//ADD FUNCTION EXPENSE
 function addExpense() {
     getUserInput();
 
@@ -41,7 +38,7 @@ function addExpense() {
     displayTableData();
 }
 
-// add income function
+//ADD FUNCTION INCOME
 function addIncome() {
     getUserInput();
 
@@ -62,19 +59,19 @@ function addIncome() {
     displayTableData();
 }
 
-//put intput data into varible
+//ADD FUNCTION INPUT DATA INTO VARIBLE
 function getUserInput() {
     amount = Number(document.getElementById('amount').value);
     transactionName = document.getElementById('transaction').value;
 }
 
-//clear input data
+//CLEAR INPUT DATA
 function clearUserInput() {
     document.getElementById('amount').value = '';
     document.getElementById('transaction').value = '';
 }
 
-// display table data
+//ADD FUNCTION DISPALY TABLE DATA
 function displayTableData() {
     let totalExpense = document.getElementById('totalExpense');
     let totalIncome = document.getElementById('totalIncome');
@@ -106,7 +103,7 @@ function displayTableData() {
     totalMoney.innerHTML = total;
 }
 
-// Calculate Totals
+//ADD FUNCTION CALCULATE Totals
 function calculate() {
     expense = 0;
     income = 0;
@@ -124,7 +121,7 @@ function calculate() {
 total = income - expense;
 }
 
-// Remove Table
+//ADD FUNCTION REMOVE INTO TABLE
 function removeTransaction(index) {
     if( 
         window.confirm(
@@ -137,7 +134,7 @@ function removeTransaction(index) {
     }
 }
 
-// Clear Table
+//ADD FUNCTION CLEAR TABLE
 function clearTableData() {
     if (tableData.length == 0) {
         alert('Transaction already empty');

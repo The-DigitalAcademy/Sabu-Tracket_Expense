@@ -31,15 +31,16 @@ body {
 .header {
     font-weight: bold;
     margin-top: 1rem;
-    border: solid 2px rgb(205, 9, 9);
+    border: solid 2px rgba(189, 15, 33, 0.979);
     padding: 1rem;
     color: honeydew;
-    background-color: rgb(213, 4, 4);
+    background-color: rgba(189, 19, 19, 0.975);
 }
 
 .input {
-    
+    width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     gap: 1rem;
 }
@@ -71,7 +72,7 @@ button:hover {
 }
 
 .expense {
-    background-color: rgb(74, 74, 241);
+    background-color: rgb(97, 95, 212);
     width: 100%;
 }
 .income {
@@ -100,12 +101,11 @@ button:hover {
     top: 0;
     left: 0;
     right: 0;
-    background-color: rgb(86, 132, 238);
-    color: whitesmoke;
+    color:black;
 }
 
 th {
-    padding: 0.5rem 0;
+    padding: 0.3rem 0;
 }
 
 .statemnet span {
@@ -119,7 +119,7 @@ table {
 }
 
 td {
-    padding: 0.5rem;
+    padding: 0.3rem;
     text-align: center;
     border-radius: 0%;
 }
@@ -148,7 +148,7 @@ td {
 }
 
 .test {
-    width: 8rem;
+    width: 5rem;
     color: black;
     font-weight: bold;
     border: solid 5px black;
@@ -157,9 +157,9 @@ td {
 
 .remove {
     padding: 0.5rem;
-    border: solid 1px gray;
+    border: solid 1px red;
     color: whitesmoke;
-    background-color: royalblue;
+    background-color: red;
 }
 
 .clear {
